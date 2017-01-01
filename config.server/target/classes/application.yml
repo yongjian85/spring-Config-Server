@@ -1,0 +1,27 @@
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: config server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/Desktop/yongjian/config
+          repos:
+            IST:
+              pattern:
+               - '*/IST'
+              uri: /Users/yongjian/Desktop/yongjian/config/IST
+            UAT:
+              pattern:
+                - '*/UAT'
+              uri: /Users/yongjian/Desktop/yongjian/config/UAT
+            PROD:
+              pattern:
+                - '*/PROD'
+              uri: /Users/yongjian/Desktop/yongjian/config/PROD
+              
+            
